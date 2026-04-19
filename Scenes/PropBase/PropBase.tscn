@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c1080bjpltoqn"]
+
+[ext_resource type="Script" uid="uid://dt8g160eyvnnd" path="res://Scenes/PropBase/prop_base.gd" id="1_jxhqc"]
+
+[node name="PropBase" type="Node3D" unique_id=161901778]
+script = ExtResource("1_jxhqc")

@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://8bd6vvltr6o7"]
+
+[ext_resource type="Theme" uid="uid://c54a5nv8kwk2y" path="res://Resources/Themes/GameTheme.tres" id="1_3mdcg"]
+[ext_resource type="Script" uid="uid://0h73frkponra" path="res://Scenes/Menus/Recipe/recipe_page.gd" id="1_ehsao"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ehsao"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.377194, 0.41993287, 0.31251225, 0.6509804)
+border_width_right = 80
+border_color = Color(0.3764706, 0.41960785, 0.3137255, 0)
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[node name="RecipePage" type="Control" unique_id=1600432704]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ehsao")
+
+[node name="Panel" type="Panel" parent="." unique_id=1323372432]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.65
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ehsao")
+
+[node name="PotionName" type="Label" parent="Panel" unique_id=1841039921]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme = ExtResource("1_3mdcg")
+text = "
+Potion Of Incredulous Incredulity Of Incredulous Nature"
+
+[node name="DescStuff" type="VBoxContainer" parent="Panel" unique_id=920510090]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -203.0
+offset_bottom = 203.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PotIng" type="Label" parent="Panel/DescStuff" unique_id=1537666954]
+layout_mode = 2
+theme = ExtResource("1_3mdcg")
+text = "Recipe Ingredients"
+
+[node name="PotionIngredients" type="Label" parent="Panel/DescStuff" unique_id=358837155]
+layout_mode = 2
+theme = ExtResource("1_3mdcg")
+text = "Ingredient1
+Ingredient2...
+Ingredient2...
+Ingredient2...
+Ingredient2...
+Ingredient2...
+Ingredient2...
+Ingredient2..."
+
+[node name="PotionCount" type="Label" parent="Panel" unique_id=1850542793]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -51.0
+offset_right = 459.99997
+grow_vertical = 0
+theme = ExtResource("1_3mdcg")
+text = "Potions crafted: 5 / 15"
+
+[node name="Label" type="Label" parent="." unique_id=538173779]
+layout_mode = 1
+offset_right = 198.0
+offset_bottom = 26.0
+theme = ExtResource("1_3mdcg")
+text = "Press 'Tab' (or recipe input)"

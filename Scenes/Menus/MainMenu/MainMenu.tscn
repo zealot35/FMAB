@@ -1,0 +1,244 @@
+[gd_scene format=3 uid="uid://duv818bfyd32r"]
+
+[ext_resource type="Theme" uid="uid://c54a5nv8kwk2y" path="res://Resources/Themes/GameTheme.tres" id="1_exe2v"]
+[ext_resource type="Script" uid="uid://c2muaccko3pyl" path="res://Scenes/Menus/MainMenu/main_menu.gd" id="1_vv2qh"]
+[ext_resource type="PackedScene" uid="uid://cw5up3chp4n8l" path="res://Scenes/Menus/scenes/menus/options_menu/master_options_menu_with_tabs.tscn" id="3_c3p6v"]
+[ext_resource type="PackedScene" uid="uid://coah5prguom4a" path="res://addons/quick_licenses/quick_licenses.tscn" id="4_445kf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_exe2v"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.14044744, 0.14044744, 0.14044744, 0.20392157)
+border_width_left = 100
+border_width_top = 100
+border_width_right = 100
+border_width_bottom = 100
+border_color = Color(0, 0, 0, 0)
+border_blend = true
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vv2qh"]
+bg_color = Color(0.7607843, 0.8745098, 0.8666667, 0.6)
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.9186939, 0.7991354, 0, 0.32941177)
+border_blend = true
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_detail = 4
+expand_margin_left = 2.0
+expand_margin_right = 6.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c3p6v"]
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 1)
+border_width_bottom = 24
+border_color = Color(0, 0, 0, 0)
+border_blend = true
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_445kf"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0.654902)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[node name="MainMenu" type="Control" unique_id=1686572225]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vv2qh")
+
+[node name="Panel" type="Panel" parent="." unique_id=322519379]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_exe2v")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=1963233863]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 120.0
+offset_right = 283.0
+offset_bottom = 268.0
+
+[node name="Title" type="Label" parent="Panel/VBoxContainer" unique_id=422132862]
+layout_mode = 2
+theme = ExtResource("1_exe2v")
+theme_override_constants/line_spacing = -17
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_outline_size = 8
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_vv2qh")
+text = "Fetch
+   Me A
+      Brew!"
+
+[node name="Title2" type="Label" parent="Panel/VBoxContainer" unique_id=1394677750]
+visible = false
+layout_mode = 2
+theme = ExtResource("1_exe2v")
+theme_override_constants/line_spacing = -17
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_outline_size = 8
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_vv2qh")
+text = "Brew
+      Game"
+
+[node name="Play" type="Button" parent="Panel/VBoxContainer" unique_id=99642275]
+layout_mode = 2
+theme = ExtResource("1_exe2v")
+text = "Play
+"
+
+[node name="Resume" type="Button" parent="Panel/VBoxContainer" unique_id=2035593608]
+visible = false
+layout_mode = 2
+theme = ExtResource("1_exe2v")
+text = "Resume
+
+"
+
+[node name="How2Play" type="Button" parent="Panel/VBoxContainer" unique_id=358660682]
+layout_mode = 2
+theme = ExtResource("1_exe2v")
+text = "How To Play
+
+"
+
+[node name="RerollPotion" type="Button" parent="Panel/VBoxContainer" unique_id=985633132]
+visible = false
+layout_mode = 2
+theme = ExtResource("1_exe2v")
+text = "Reroll Potion
+
+"
+
+[node name="Settings" type="Button" parent="Panel/VBoxContainer" unique_id=662488652]
+layout_mode = 2
+theme = ExtResource("1_exe2v")
+text = "Settings
+
+"
+
+[node name="Attributions" type="Button" parent="Panel/VBoxContainer" unique_id=244076262]
+layout_mode = 2
+theme = ExtResource("1_exe2v")
+text = "Attributions
+"
+
+[node name="Quit" type="Button" parent="Panel/VBoxContainer" unique_id=724766525]
+layout_mode = 2
+theme = ExtResource("1_exe2v")
+text = "Quit
+"
+
+[node name="Credit" type="RichTextLabel" parent="Panel" unique_id=239559602]
+self_modulate = Color(0.67481464, 0.67481464, 0.6748146, 0.62352943)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -174.0
+offset_top = -55.0
+offset_right = 174.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_c3p6v")
+bbcode_enabled = true
+text = "[i]  Created by Zealorguy for Godot Wild Jam #92  [/i]"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
+horizontal_alignment = 1
+
+[node name="Option" type="Panel" parent="." unique_id=1065910078]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3
+anchor_top = 0.1
+anchor_right = 0.4
+anchor_bottom = 0.1
+grow_horizontal = 2
+
+[node name="MasterOptionsMenu" parent="Option" unique_id=1282540355 instance=ExtResource("3_c3p6v")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 584.0
+offset_bottom = 509.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Attribution" type="Panel" parent="." unique_id=826052751]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_445kf")
+
+[node name="QuickLicenses" parent="Attribution" unique_id=332483347 instance=ExtResource("4_445kf")]
+layout_mode = 1
+
+[node name="How2Play" type="Panel" parent="." unique_id=1292470959]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="How2Play" unique_id=566138144]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "You are a fancy apprentice to a powerful wizard!
+The wizard, Ossansis, needs you to brew 15 potions in a row.
+
+Press Use or Right Click to interact with your environment! Process ingredients and
+assemble the listed recipe! Ingredients can be found on the round tables scattered
+about. View the current recipe by pressing 'Tab' (default).
+
+Place processed ingredients on the pulley-platform to start the
+potion crafting. If the ingredients are correct, the potion will appear in a blaze of
+glory. If not, you will know.
+
+But be careful! Ingredients can have nasty effects that may get in your way. Keep
+an eye out for visual cues.
+
+Bring your finished potions out onto the deck and place them within the submission
+bucket. Then, continue crafting potions to your heart's content. Though, the difficulty
+may rise...
+
+If you lose track of any ingredients or have a misstep, press the 'Reroll Potion'
+button in the pause menu!"

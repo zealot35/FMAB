@@ -1,0 +1,16 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://yfaxq3s4bur3"]
+
+[ext_resource type="Shader" uid="uid://dx4qdcjdwafs6" path="res://Resources/Shaders/rain.gdshader" id="1_6qie8"]
+
+[resource]
+render_priority = 1
+shader = ExtResource("1_6qie8")
+shader_parameter/dripping_speed = 0.5
+shader_parameter/dripping_wave_size = Vector2(23.98, 5.685)
+shader_parameter/dripping_wave_freq = Vector2(47, 15)
+shader_parameter/dripping_wave_power = Vector2(0.045, 1)
+shader_parameter/static_interval = 10.0
+shader_parameter/static_shift = Vector2(4.8, 0.8)
+shader_parameter/static_wave_size = Vector2(81.432144, 85.45453)
+shader_parameter/static_wave_freq = Vector2(38, 92)
+shader_parameter/static_wave_power = Vector2(1.8, 2.8)

@@ -1,0 +1,115 @@
+[
+	{
+		"name": "Godot Engine",
+		"source": "https://godotengine.org",
+		"parts": [
+			{
+				"copyright": [
+					"2014-present, Godot Engine contributors",
+					"2007-2014, Juan Linietsky, Ariel Manzur"
+				],
+				"license": "Expat"
+			}
+		]
+	},
+	{
+		"name": "Zealot's Music",
+		"source": "https://soundcloud.com/thezealot35",
+		"parts": [
+			{
+				"copyright": ["2020-2026, Zealorguy"],
+				"license": "All Rights Reserved"
+			}
+		]
+	},
+	{
+		"name": "Quick Licenses",
+		"source": "https://github.com/ProgrammerOnCoffee/Quick-Licenses",
+		"parts": [
+			{
+				"copyright": ["2025, ProgrammerOnCoffee"],
+				"license": "Expat"
+			}
+		]
+	},
+	{
+		"name": "Particle Rain",
+		"source": "https://github.com/mmbwatt/Particle_Rain_FX",
+		"parts": [
+			{
+				"copyright": ["2023, Watt Interactive"],
+				"license": "CC0 1.0"
+			}
+		]
+	},
+	{
+		"name": "Rain Glass Effect",
+		"source": "https://godotshaders.com/shader/procedural-window-rain-drop-shader/",
+		"parts": [
+			{
+				"copyright": ["2021, Yui Kinomoto @arlez80"],
+				"license": "MIT"
+			}
+		]
+	},
+	{
+		"name": "Terrainy",
+		"source": "https://github.com/fabian-becker/Terrainy",
+		"parts": [
+			{
+				"copyright": ["2026, LuckyTeapot"],
+				"license": "MIT"
+			}
+		]
+	},
+	{
+		"name": "Flexible Toon Shader",
+		"source": "https://github.com/atzuk4451/FlexibleToonShaderGD-4.0",
+		"parts": [
+			{
+				"copyright": ["2021, John Wigg"],
+				"license": "MIT"
+			}
+		]
+	},
+	{
+		"name": "Liquid In Mesh Shader",
+		"source": "https://github.com/niceandgoodonline/Liquid-In-Mesh-Shader-Demo-Godot",
+		"parts": [
+			{
+				"copyright": ["2023, niceandgoodonline"],
+				"license": "CC0 1.0"
+			}
+		]
+	},
+	{
+		"name": "Godot Options Menus",
+		"source": "https://github.com/Maaack/Godot-Options-Menus",
+		"parts": [
+			{
+				"copyright": ["2022, Marek Belski"],
+				"license": "MIT"
+			}
+		]
+	},
+	{
+		"name": "BitPotion Font",
+		"source": "https://www.dafont.com/bitpotion.font",
+		"parts": [
+			{
+				"copyright": ["2018, Joeb Rogers"],
+				"license": "CC-BY"
+			}
+		]
+	},
+	{
+		"name": "Overcast Soil (Pure Sky)",
+		"source": "https://polyhaven.com/a/overcast_soil_puresky",
+		"parts": [
+			{
+				"copyright": ["2025, Jarod Guest, Sergej Majboroda"],
+				"license": "CC0"
+			}
+		]
+	}
+]

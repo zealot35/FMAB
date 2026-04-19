@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://b0yxbillwuv1"]
+
+[ext_resource type="Script" uid="uid://camarj7onr1u1" path="res://Scenes/Player/player.gd" id="1_uvnfx"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_f60y1"]
+height = 1.8
+radius = 0.4
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_v0iea"]
+height = 1.0
+radius = 0.4
+
+[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_uvnfx"]
+polyphony = 8
+
+[node name="Player" type="CharacterBody3D" unique_id=1030195034]
+collision_layer = 3
+collision_mask = 3
+floor_snap_length = 0.5
+script = ExtResource("1_uvnfx")
+
+[node name="StandCol" type="CollisionShape3D" parent="." unique_id=1544854899]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("CylinderShape3D_f60y1")
+
+[node name="CrouchCol" type="CollisionShape3D" parent="." unique_id=1639502704]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("CylinderShape3D_v0iea")
+
+[node name="Head" type="Node3D" parent="." unique_id=1850424566]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
+
+[node name="Footsteps" type="AudioStreamPlayer3D" parent="Head" unique_id=393121654]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.509038, -0.34034824)
+stream = SubResource("AudioStreamPolyphonic_uvnfx")
+volume_db = -5.0
+unit_size = 1.0
+bus = &"Environment"
+
+[node name="Camera" type="Camera3D" parent="Head" unique_id=747241662]
+cull_mask = 1048573
+
+[node name="EyeTrace" type="RayCast3D" parent="Head/Camera" unique_id=1934413481]
+target_position = Vector3(0, 0, -2.5)
+collision_mask = 13
+
+[node name="CamFollowTarget" type="RayCast3D" parent="Head" unique_id=282777097]
+target_position = Vector3(0, 0, -1.5)
+collision_mask = 13
+debug_shape_custom_color = Color(0.50980395, 0.2901961, 0.45882353, 0.21960784)
+debug_shape_thickness = 5
+
+[node name="CamFollowWheel" type="RayCast3D" parent="Head" unique_id=646386357]
+target_position = Vector3(0, 0, -1.5)
+collision_mask = 13
+
+[node name="CrouchCheck" type="ShapeCast3D" parent="." unique_id=1680005178]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("CylinderShape3D_f60y1")
+target_position = Vector3(0, 0, 0)
+
+[node name="StepCheck" type="ShapeCast3D" parent="." unique_id=1009075647]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("CylinderShape3D_f60y1")
+target_position = Vector3(0, 0, 0)
+
+[node name="StepRayCheck" type="RayCast3D" parent="." unique_id=1823917444]
+target_position = Vector3(0, 1.8, 0)

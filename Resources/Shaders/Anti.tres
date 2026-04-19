@@ -1,0 +1,22 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://bk5tt13riqs56"]
+
+[ext_resource type="Shader" uid="uid://cytfwl6ui8miq" path="res://Resources/Shaders/GlowThing.gdshader" id="1_7kfji"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_5or5o"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ak6lc"]
+width = 16
+height = 16
+noise = SubResource("FastNoiseLite_5or5o")
+
+[resource]
+render_priority = 1
+shader = ExtResource("1_7kfji")
+shader_parameter/Noise = SubResource("NoiseTexture2D_ak6lc")
+shader_parameter/time = 0.5499999877064
+shader_parameter/dir = Vector2(-0.81, -0.285)
+shader_parameter/emission = Vector3(-0.545, 0.415, 0)
+shader_parameter/alpha = 1.0
+shader_parameter/freq = 3.2999999262384
+shader_parameter/amp = 0.25999999418848
+shader_parameter/offset = 0.0

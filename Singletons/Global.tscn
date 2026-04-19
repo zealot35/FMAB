@@ -1,0 +1,135 @@
+[gd_scene format=3 uid="uid://chbtkah7414gf"]
+
+[ext_resource type="Script" uid="uid://ysq7gybiqxc5" path="res://Singletons/global.gd" id="1_wehyw"]
+[ext_resource type="Script" uid="uid://cxlxetqnppaoo" path="res://Singletons/hover.gd" id="2_7vbv8"]
+[ext_resource type="PackedScene" uid="uid://duv818bfyd32r" path="res://Scenes/Menus/MainMenu/MainMenu.tscn" id="2_524j0"]
+[ext_resource type="Texture2D" uid="uid://b71weketxslba" path="res://Resources/Textures/fmabcrosshairopen.png" id="2_eaj24"]
+[ext_resource type="PackedScene" uid="uid://8bd6vvltr6o7" path="res://Scenes/Menus/Recipe/RecipePage.tscn" id="2_mcypv"]
+[ext_resource type="PackedScene" uid="uid://4bafyqfa0aoi" path="res://Scenes/Menus/EndMenu/EndMenu.tscn" id="3_pqa8c"]
+[ext_resource type="Theme" uid="uid://c54a5nv8kwk2y" path="res://Resources/Themes/GameTheme.tres" id="4_j2aco"]
+[ext_resource type="FontFile" uid="uid://dkgj226epfu3v" path="res://Resources/Fonts/BitPotionExt.ttf" id="6_tuqxd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1de60"]
+bg_color = Color(1, 0, 0.10980392, 0)
+border_width_left = 160
+border_width_top = 160
+border_width_right = 160
+border_width_bottom = 160
+border_color = Color(0.6845281, 0.10655547, 9.62615e-08, 0.38431373)
+border_blend = true
+corner_detail = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pqa8c"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(0.21482322, 0.20720825, 0.20212695, 0.5568628)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+corner_detail = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mcypv"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(0.93208474, 0.27546364, 0.34767732, 0.4)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+corner_detail = 6
+
+[node name="Global" type="Node" unique_id=2137038637]
+script = ExtResource("1_wehyw")
+
+[node name="Damage" type="Panel" parent="." unique_id=177163873]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1de60")
+
+[node name="RecipePage" parent="." unique_id=1600432704 instance=ExtResource("2_mcypv")]
+visible = false
+offset_left = 806.0
+offset_right = 806.0
+
+[node name="HealthBar" type="ProgressBar" parent="." unique_id=1103423411]
+visible = false
+custom_minimum_size = Vector2(250, 0)
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.91
+anchor_right = 0.5
+anchor_bottom = 0.91
+offset_left = -125.0
+offset_top = -27.0
+offset_right = 125.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.72789365, 0.7908269, 0.9092117, 1)
+theme_override_fonts/font = ExtResource("6_tuqxd")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/background = SubResource("StyleBoxFlat_pqa8c")
+theme_override_styles/fill = SubResource("StyleBoxFlat_mcypv")
+step = 1.0
+value = 76.0
+rounded = true
+
+[node name="MainMenu" parent="." unique_id=1686572225 instance=ExtResource("2_524j0")]
+
+[node name="EndMenu" parent="." unique_id=339434710 instance=ExtResource("3_pqa8c")]
+visible = false
+
+[node name="DebugUI" type="Label" parent="." unique_id=1701326208]
+visible = false
+offset_right = 56.0
+offset_bottom = 23.0
+text = "farding"
+
+[node name="HoverParent" type="Control" parent="." unique_id=962470762]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_7vbv8")
+
+[node name="HoverHoriz" type="HBoxContainer" parent="HoverParent" unique_id=1181974378]
+layout_mode = 0
+offset_left = -19.0
+offset_top = -32.0
+offset_right = 91.0
+offset_bottom = 30.0
+alignment = 1
+
+[node name="Cursor" type="TextureRect" parent="HoverParent/HoverHoriz" unique_id=1613256115]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("2_eaj24")
+stretch_mode = 3
+
+[node name="InspectorParent" type="VBoxContainer" parent="HoverParent/HoverHoriz" unique_id=1671947066]
+layout_mode = 2
+
+[node name="InspectorName" type="Label" parent="HoverParent/HoverHoriz/InspectorParent" unique_id=1575308800]
+layout_mode = 2
+theme = ExtResource("4_j2aco")
+theme_override_font_sizes/font_size = 32
+text = "farding"
+
+[node name="InspectorDesc" type="Label" parent="HoverParent/HoverHoriz/InspectorParent" unique_id=1298370543]
+layout_mode = 2
+theme = ExtResource("4_j2aco")
+text = "farded"
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=160018440]
+volume_db = -12.0
+bus = &"Music"
+
+[editable path="MainMenu"]

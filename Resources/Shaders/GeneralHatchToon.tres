@@ -1,0 +1,19 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://barubll2ev0su"]
+
+[ext_resource type="Shader" uid="uid://dwdh27oeoyu4x" path="res://addons/flexible_toon_shader/hatch_toon.gdshader" id="1_34sk2"]
+[ext_resource type="Texture2D" uid="uid://dfkq1uskl2w7q" path="res://addons/flexible_toon_shader/hatch.png" id="2_nj7m8"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_34sk2")
+shader_parameter/albedo = Color(0.563828, 0.42417035, 0.2747338, 1)
+shader_parameter/cuts = 3
+shader_parameter/wrap = 0.5000001187500001
+shader_parameter/steepness = 1.0
+shader_parameter/use_attenuation = true
+shader_parameter/use_rim = true
+shader_parameter/rim_width = 4.00000019
+shader_parameter/rim_color = Color(1, 1, 1, 1)
+shader_parameter/hatch_scale = 4.0
+shader_parameter/use_triplanar = true
+shader_parameter/hatch_texture = ExtResource("2_nj7m8")

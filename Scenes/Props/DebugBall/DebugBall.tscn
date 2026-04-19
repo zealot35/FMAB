@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://bb6ujdt7g6lkn"]
+
+[ext_resource type="Script" uid="uid://dt8g160eyvnnd" path="res://Scenes/PropBase/prop_base.gd" id="1_a0uff"]
+[ext_resource type="Material" uid="uid://bdqd1yfyc4jdc" path="res://addons/flexible_toon_shader/HatchToonMaterial.tres" id="2_wvd7r"]
+[ext_resource type="Material" uid="uid://bjcdafc1a12jm" path="res://addons/liquid_stuff/Demo/Example/smooth-movement-shader-material.tres" id="2_xwqe3"]
+[ext_resource type="Script" uid="uid://c7mdplwvhdskd" path="res://addons/liquid_stuff/LiquidShader/MinimalLiquidSimulation.gd" id="3_fcmn8"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_wvd7r"]
+radial_segments = 16
+rings = 8
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_a0uff"]
+friction = 0.9
+bounce = 0.25
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_a0uff"]
+
+[node name="DebugBall" type="Node3D" unique_id=2073111786]
+script = ExtResource("1_a0uff")
+prop_name = "Ballin"
+prop_desc = "AWWOOOGKA WAW GAW OGOKAWFR OWAF KOGWAF 
+OWAGFOGOAWGFO AWGO AWGO WAOG G WAWGAWG AW 
+GAOGAWG OWAGOAWGO GOAGO"
+prop_follows_phys_object = true
+metadata/_custom_type_script = "uid://dt8g160eyvnnd"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=414139464]
+mesh = SubResource("SphereMesh_wvd7r")
+surface_material_override/0 = ExtResource("2_wvd7r")
+script = ExtResource("3_fcmn8")
+liquidShaderMaterial = ExtResource("2_xwqe3")
+dampening = 1.0
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1250177016]
+mass = 10.0
+physics_material_override = SubResource("PhysicsMaterial_a0uff")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=1171078609]
+shape = SubResource("SphereShape3D_a0uff")

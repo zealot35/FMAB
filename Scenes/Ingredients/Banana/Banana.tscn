@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://628j2qr3yut5"]
+
+[ext_resource type="Script" uid="uid://d2tpg84oln41j" path="res://Scenes/IngredientBase/ingredient_base.gd" id="1_2piqv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2cbx3"]
+size = Vector3(0.5, 0.5, 0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2fg50"]
+size = Vector3(0.5, 0.5, 0.5)
+
+[node name="Banana" type="Node3D" unique_id=513156432]
+script = ExtResource("1_2piqv")
+prop_name = "Banana"
+prop_desc = "A gods damned banana.
+Highly toxic!"
+metadata/_custom_type_script = "uid://d2tpg84oln41j"
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=779954161]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=835302987]
+shape = SubResource("BoxShape3D_2cbx3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D" unique_id=1569943386]
+mesh = SubResource("BoxMesh_2fg50")

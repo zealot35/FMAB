@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://4bafyqfa0aoi"]
+
+[ext_resource type="Script" uid="uid://b8li4yoc8l4xs" path="res://Scenes/Menus/EndMenu/end_menu.gd" id="1_0kgq6"]
+[ext_resource type="Theme" uid="uid://c54a5nv8kwk2y" path="res://Resources/Themes/GameTheme.tres" id="2_5uu0y"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uyr5h"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.14044744, 0.14044744, 0.14044744, 0.20392157)
+border_width_left = 100
+border_width_top = 100
+border_width_right = 100
+border_width_bottom = 100
+border_color = Color(0, 0, 0, 0)
+border_blend = true
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uvcni"]
+bg_color = Color(0.7607843, 0.8745098, 0.8666667, 0.6)
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.9186939, 0.7991354, 0, 0.32941177)
+border_blend = true
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_detail = 4
+expand_margin_left = 2.0
+expand_margin_right = 6.0
+
+[node name="EndMenu" type="Control" unique_id=339434710]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0kgq6")
+
+[node name="Panel" type="Panel" parent="." unique_id=1145403659]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_uyr5h")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=535271743]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -81.5
+offset_top = -165.5
+offset_right = 81.5
+offset_bottom = 165.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Lose" type="Label" parent="Panel/VBoxContainer" unique_id=944567289]
+visible = false
+layout_mode = 2
+theme = ExtResource("2_5uu0y")
+theme_override_constants/line_spacing = -17
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_outline_size = 8
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_uvcni")
+text = "You....
+     ....Lost!"
+
+[node name="Win" type="Label" parent="Panel/VBoxContainer" unique_id=1440698411]
+visible = false
+layout_mode = 2
+theme = ExtResource("2_5uu0y")
+theme_override_constants/line_spacing = -17
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_outline_size = 8
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_uvcni")
+text = "You....
+   ....DID IT!!!"
+
+[node name="TryAgain" type="Button" parent="Panel/VBoxContainer" unique_id=349347833]
+layout_mode = 2
+theme = ExtResource("2_5uu0y")
+text = "Try Again?
+"
+
+[node name="Quit" type="Button" parent="Panel/VBoxContainer" unique_id=531824559]
+layout_mode = 2
+theme = ExtResource("2_5uu0y")
+text = "I'm Out...
+"
