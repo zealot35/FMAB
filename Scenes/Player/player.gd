@@ -531,11 +531,16 @@ func holdingObject(delta):
 	if held_object.is_in_group("is_wheel"):
 		if camFollowTarget.is_colliding():
 			_pos = -(to_local(camFollowTarget.get_collision_point()))
-			
+	
+	var cust_dist : float = dist
+
+	if held_object.is_in_group("grab_me_boy"):
+		cust_dist = camera.global_position.distance_to(held_object.global_position)
+
 	# where the object will be held
-	var hold_point : Vector3 = from + (_pos * dist)
-	if held_object.is_in_group("is_wheel"):
-		hold_point = from + _pos
+	var hold_point : Vector3 = from + (_pos * cust_dist)
+	# if held_object.is_in_group("grab_me_boy"):
+	# 	hold_point = from + _pos
 	# need to get 'center point' for held_object
 	var prop = held_object.get_parent()
 	var origin : Vector3 = held_object.global_transform.origin

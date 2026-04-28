@@ -88,7 +88,6 @@ rounded = true
 visible = false
 
 [node name="DebugUI" type="Label" parent="." unique_id=1701326208]
-visible = false
 offset_right = 56.0
 offset_bottom = 23.0
 text = "farding"

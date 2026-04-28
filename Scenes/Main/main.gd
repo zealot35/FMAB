@@ -41,5 +41,3 @@ func teleportStuff(body):
 func resetPlayer():
 	GLOBAL.player.global_position = playerSpawn.global_position
 	GLOBAL.player.resetPlayer()
-
-

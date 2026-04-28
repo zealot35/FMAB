@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b6lk74xhahkm4"
 path.bptc="res://.godot/imported/overcast_soil_puresky_4k.exr-d980af184227531bf7391e6bda4b9bce.bptc.ctex"
+path.astc="res://.godot/imported/overcast_soil_puresky_4k.exr-d980af184227531bf7391e6bda4b9bce.astc.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://addons/particle_rain/Weather/Rain/overcast_soil_puresky_4k.exr"
-dest_files=["res://.godot/imported/overcast_soil_puresky_4k.exr-d980af184227531bf7391e6bda4b9bce.bptc.ctex"]
+dest_files=["res://.godot/imported/overcast_soil_puresky_4k.exr-d980af184227531bf7391e6bda4b9bce.bptc.ctex", "res://.godot/imported/overcast_soil_puresky_4k.exr-d980af184227531bf7391e6bda4b9bce.astc.ctex"]
 
 [params]
 

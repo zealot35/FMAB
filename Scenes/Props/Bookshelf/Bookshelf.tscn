@@ -201,6 +201,7 @@ surface_material_override/0 = SubResource("ShaderMaterial_fbey4")
 
 [node name="Books" type="MeshInstance3D" parent="Bookshelf" unique_id=489080779]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19272995, 1.8025513, 2.1828604)
+cast_shadow = 0
 mesh = SubResource("ArrayMesh_d5wc8")
 surface_material_override/0 = SubResource("ShaderMaterial_3e4c7")
 surface_material_override/1 = SubResource("ShaderMaterial_ybda2")

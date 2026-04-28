@@ -228,6 +228,7 @@ shape = SubResource("CylinderShape3D_q3quf")
 
 [node name="Barrel" type="MeshInstance3D" parent="." unique_id=1642365617]
 transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0, 0.92233205, 0)
+cast_shadow = 0
 mesh = SubResource("ArrayMesh_jg3fx")
 surface_material_override/0 = SubResource("ShaderMaterial_cnbln")
 surface_material_override/1 = SubResource("ShaderMaterial_wljor")

@@ -1,6 +1,6 @@
 extends Node
 
-var debug_mode : bool = false
+var debug_mode : bool = true
 
 var in_game : bool = false
 
@@ -54,6 +54,18 @@ func _ready():
 	musicPlayer.finished.connect(musicFinished)
 	if !debug_mode:
 		debugUI.visible = false
+	
+	var potion_combos : int = 0
+	var potion_desc_combos : int = 0
+
+	potion_combos = (PotionBase.potion_prefixes.size() *
+					PotionBase.potion_types.size() * 
+					PotionBase.potion_suffixes.size() + 
+					PotionBase.potion_specials.size())
+	potion_desc_combos = potion_combos * PotionBase.potion_descs.size()
+
+
+	print("Potion Variants: ", potion_combos, " + Potion Variants w/ Desc: ", potion_desc_combos)
 
 
 func _physics_process(delta):

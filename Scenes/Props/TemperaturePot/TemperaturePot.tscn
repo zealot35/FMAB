@@ -331,7 +331,6 @@ shape = SubResource("CylinderShape3D_mhuol")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5266025, 0)
 size = Vector3(2, 1.3974609, 2)
 resolution = 0
-update_mode = 1
 heightfield_mask = 1048574
 
 [editable path="Wheel"]

@@ -5,6 +5,7 @@ var focused : bool = false
 var disabled : bool = false
 
 @onready var cursor : TextureRect = $HoverHoriz/Cursor
+@onready var inspectorStuff : VBoxContainer = $HoverHoriz/InspectorParent
 
 var hoverFocused : Texture2D = load("res://Resources/Textures/fmabcrosshairselected.png")
 var hoverUnfocused : Texture2D = load("res://Resources/Textures/fmabcrosshairopen.png")
@@ -16,10 +17,18 @@ func _process(_d):
 		return
 	var camera : Camera3D = get_viewport().get_camera_3d()
 	
+	if !GLOBAL.in_game:
+		visible = false
+		return
+
+	visible = true
+
 	# check if disabled
 	if target == Vector3.ZERO:
-		self.visible = false
+		self.set_position(get_viewport().get_visible_rect().size/2 - Vector2(32, 0))
+		inspectorStuff.visible = false
 		return
+	inspectorStuff.visible = true
 	self.visible = true
 	
 	# update texture

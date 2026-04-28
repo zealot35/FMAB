@@ -350,7 +350,7 @@ static func generateCustomPotionIngredients() -> Array:
 	var _dt : int = 100 - (_dif*5)
 	var _pt : int = 100 - (_dif*10)
 
-	var _ing_count : int = randi() % 3 + (_dif / 2)
+	var _ing_count : int = maxi(1, randi() % 3 + (_dif / 2))
 
 	var _recipe : Array = []
 

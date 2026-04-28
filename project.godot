@@ -34,6 +34,10 @@ window/stretch/aspect="keep_height"
 
 enabled=PackedStringArray("res://addons/maaacks_options_menus/plugin.cfg", "res://addons/terrainy/plugin.cfg")
 
+[global_group]
+
+grab_me_boy=""
+
 [input]
 
 jump={
@@ -121,4 +125,8 @@ common/max_physics_steps_per_frame=6
 
 [rendering]
 
+occlusion_culling/bvh_build_quality=1
 rendering_device/driver.windows="d3d12"
+textures/vram_compression/import_etc2_astc=true
+lights_and_shadows/directional_shadow/size=1024
+occlusion_culling/occlusion_rays_per_thread=256

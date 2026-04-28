@@ -215,6 +215,7 @@ surface_material_override/0 = SubResource("ShaderMaterial_6kkh2")
 
 [node name="PitArm" type="MeshInstance3D" parent="." unique_id=1937307154]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.3)
+cast_shadow = 0
 mesh = SubResource("ArrayMesh_w2how")
 surface_material_override/0 = SubResource("ShaderMaterial_8ivih")
 
@@ -254,7 +255,7 @@ prop_collision_layers = 4
 prop_collision_mask = 4
 metadata/_custom_type_script = "uid://dt8g160eyvnnd"
 
-[node name="RigidBody3D" type="RigidBody3D" parent="Lever" unique_id=350558005 groups=["is_wheel"]]
+[node name="RigidBody3D" type="RigidBody3D" parent="Lever" unique_id=350558005 groups=["grab_me_boy", "is_wheel"]]
 collision_layer = 4
 collision_mask = 4
 
